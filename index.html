@@ -31,12 +31,14 @@
           <a class="logo" href="">Web<span class="logo-header">Studio</span></a>
           <ul class="main-item header-item">
             <li class="text-li">
-              <a class="text-logo" href="./index.html">Студія</a>
+              <a class="text-logo current" href="./index.html">Студія</a>
             </li>
             <li class="text-li">
-              <a class="text-logo" href="./portfolio.html">Портфоліо</a>
+              <a class="text-logo current" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="text-li"><a class="text-logo" href="">Контакти</a></li>
+            <li class="text-li">
+              <a class="text-logo current" href="">Контакти</a>
+            </li>
           </ul>
         </nav>
         <div class="header-info">
@@ -63,7 +65,9 @@
             Ефективні рішення для <br />
             вашого бізнесу
           </h1>
-          <button class="main-button" type="button">Замовити послугу</button>
+          <button class="main-button" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <section class="section">
@@ -126,12 +130,21 @@
           <ul class="title-img">
             <li class="main-item">
               <img src="./img/img1.jpg" alt="робота" width="370" height="294" />
+              <div class="overlay">
+                <p class="overlay-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="main-item">
               <img src="./img/img2.jpg" alt="робота" width="370" height="294" />
+              <div class="overlay">
+                <p class="overlay-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="main-item">
               <img src="./img/img3.jpg" alt="робота" width="370" height="294" />
+              <div class="overlay">
+                <p class="overlay-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -520,5 +533,17 @@
         </div>
       </div>
     </footer>
+    <!--Modal window-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="icon-close" width="18" height="18">
+            <use href="./img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
